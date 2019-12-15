@@ -1,0 +1,23 @@
+Composite: When I create a new user
+When I enter `<email>` in field located `By.xpath(//input[@id='email'])`
+When I click on element located `By.xpath(//input[@id='signup' and @type='button'])`
+When I enter `<name>` in field located `By.xpath(//input[@id='name'])`
+When I enter `<password>` in field located `By.xpath(//input[@id='password'])`
+When I click on element located `By.xpath(//input[@id='signup' and @type='button'])`
+
+Composite: When I login with an existing User with Board
+When I click on an element with the text 'Log In'
+When I enter `SettupedUser@ugly.email` in field located `By.xpath(//input[@id='user'])`
+When I enter `Parol12345` in field located `By.xpath(//input[@id='password'])`
+When I click on element located `By.xpath(//input[@id='login'])`
+
+Composite: Then Profile page is loaded
+Then the page title is equal to 'Profile | Trello'
+Then the text 'Manage your personal information' exists
+Then the text 'About' exists
+Then the text 'Full Name' exists
+Then the text 'Initials' exists
+Then the text 'Username' exists
+Then the text 'Bio' exists
+Then the text 'Contact' exists
+Then the text 'Email address' exists
